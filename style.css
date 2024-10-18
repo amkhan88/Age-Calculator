@@ -1,0 +1,189 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Background */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f9d423, #ff4e50, #1e90ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 85%;
+    max-width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    text-align: center;
+}
+
+.left-panel h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ff6b81;
+    animation: bounce 2s infinite;
+}
+
+.left-panel h1 span {
+    color: #007bff;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Digital Clock */
+.clock {
+    font-size: 30px;
+    margin: 10px 0;
+    color: #ff4e50;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Input Box */
+.input-box {
+    display: flex;
+    margin: 20px 0;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+input:focus {
+    outline: 2px solid #007bff;
+}
+
+button {
+    padding: 15px 30px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Result Box */
+.result {
+    font-size: 22px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Right Panel: Quotes */
+.right-panel {
+    flex: 1;
+    background: rgba(0, 123, 255, 0.9);
+    padding: 40px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.right-panel h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.quote-box {
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

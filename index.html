@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Panel: Calculator -->
+        <div class="left-panel">
+            <h1>🎉 Age <br><span>Calculator</span></h1>
+            <div class="clock" id="clock"></div>
+            <div class="input-box">
+                <input type="date" id="birthdate" placeholder="Select your birthdate">
+                <button id="calculate-btn">Calculate Age</button>
+            </div>
+            <div id="result" class="result"></div>
+        </div>
+
+        <!-- Right Panel: Quotes Section -->
+        <div class="right-panel">
+            <h2>🌟 Quote of the Day</h2>
+            <div id="quote-box" class="quote-box"></div>
+        </div>
+    </div>
+
+    <!-- Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
